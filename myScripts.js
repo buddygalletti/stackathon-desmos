@@ -1,6 +1,6 @@
 const elt = document.getElementById('calculator');
 
-// remove the secret folders option when deploy
+// remove the secret folders option when not testing
 const calculator = Desmos.GraphingCalculator(elt, {
   administerSecretFolders: true
 });
