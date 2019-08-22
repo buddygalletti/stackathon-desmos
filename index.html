@@ -9,6 +9,7 @@
         height: 550px;
       }
     </style>
+    <script defer src="myScripts.js"></script>
     <script>
       if (typeof module === 'object') {
         window.module = module;
@@ -27,10 +28,6 @@
 
     <div id="calculator"></div>
 
-    <script>
-      const elt = document.getElementById('calculator');
-      const calculator = Desmos.GraphingCalculator(elt);
-      calculator.setExpression({ id: 'graph1', latex: 'y=x^2' });
-    </script>
+    <button id="generateNewSeed">New Graph</button>
   </body>
 </html>
