@@ -23,6 +23,9 @@ class Seed {
       );
       degree--;
     }
+    if (this.coefficients[0] === 0) {
+      this.coefficients[0] = 1;
+    }
   }
   setExpression() {
     this.expression = this.coefficients.reduce((acc, coeff, idx) => {
