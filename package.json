@@ -1,0 +1,22 @@
+{
+  "name": "desmos_buddy",
+  "version": "1.0.0",
+  "description": "A learning tool to avoid factoring",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buddygalletti/stackathon-desmos.git"
+  },
+  "author": "Buddy Galletti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buddygalletti/stackathon-desmos/issues"
+  },
+  "homepage": "https://github.com/buddygalletti/stackathon-desmos#readme",
+  "devDependencies": {
+    "electron": "^6.0.3"
+  }
+}

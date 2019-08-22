@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      #calculator {
+        width: 750px;
+        height: 550px;
+      }
+    </style>
+    <script>
+      if (typeof module === 'object') {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+    <script src="https://www.desmos.com/api/v1.3/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+    <script>
+      if (window.module) module = window.module;
+    </script>
+    <title>re:fctrd</title>
+  </head>
+
+  <body>
+    <h1>Hello World!</h1>
+
+    <div id="calculator"></div>
+
+    <script>
+      const elt = document.getElementById('calculator');
+      const calculator = Desmos.GraphingCalculator(elt);
+      calculator.setExpression({ id: 'graph1', latex: 'y=x^2' });
+    </script>
+  </body>
+</html>
