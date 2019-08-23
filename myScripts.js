@@ -8,7 +8,7 @@ const calculator = Desmos.GraphingCalculator(elt, {
 class Seed {
   constructor(degree) {
     this.id = Math.floor(Math.random() * 1000000000);
-    this.degree = degree;
+    this.degree = degree || Math.floor(Math.random() * 6) + 1;
     this.coefficients = [];
     this.expression = '';
   }
@@ -42,10 +42,88 @@ class Seed {
 }
 let seed;
 
-const newGraphButton = document.getElementById('generateNewSeed');
-newGraphButton.addEventListener('click', () => {
+const newDegOne = document.getElementById('degree-1');
+newDegOne.addEventListener('click', () => {
+  calculator.setBlank();
+  seed = new Seed(1);
+  seed.setCoeffs();
+  seed.setExpression();
+  calculator.setExpression({
+    id: `${seed.id}`,
+    latex: `${seed.expression}`,
+    secret: true
+  });
+});
+
+const newDegTwo = document.getElementById('degree-2');
+newDegTwo.addEventListener('click', () => {
+  calculator.setBlank();
+  seed = new Seed(2);
+  seed.setCoeffs();
+  seed.setExpression();
+  calculator.setExpression({
+    id: `${seed.id}`,
+    latex: `${seed.expression}`,
+    secret: true
+  });
+});
+
+const newDegThree = document.getElementById('degree-3');
+newDegThree.addEventListener('click', () => {
+  calculator.setBlank();
+  seed = new Seed(3);
+  seed.setCoeffs();
+  seed.setExpression();
+  calculator.setExpression({
+    id: `${seed.id}`,
+    latex: `${seed.expression}`,
+    secret: true
+  });
+});
+
+const newDegFour = document.getElementById('degree-4');
+newDegFour.addEventListener('click', () => {
   calculator.setBlank();
   seed = new Seed(4);
+  seed.setCoeffs();
+  seed.setExpression();
+  calculator.setExpression({
+    id: `${seed.id}`,
+    latex: `${seed.expression}`,
+    secret: true
+  });
+});
+
+const newDegFive = document.getElementById('degree-5');
+newDegFive.addEventListener('click', () => {
+  calculator.setBlank();
+  seed = new Seed(5);
+  seed.setCoeffs();
+  seed.setExpression();
+  calculator.setExpression({
+    id: `${seed.id}`,
+    latex: `${seed.expression}`,
+    secret: true
+  });
+});
+
+const newDegSix = document.getElementById('degree-6');
+newDegSix.addEventListener('click', () => {
+  calculator.setBlank();
+  seed = new Seed(6);
+  seed.setCoeffs();
+  seed.setExpression();
+  calculator.setExpression({
+    id: `${seed.id}`,
+    latex: `${seed.expression}`,
+    secret: true
+  });
+});
+
+const newRandomDeg = document.getElementById('degree-surprise');
+newRandomDeg.addEventListener('click', () => {
+  calculator.setBlank();
+  seed = new Seed();
   seed.setCoeffs();
   seed.setExpression();
   calculator.setExpression({

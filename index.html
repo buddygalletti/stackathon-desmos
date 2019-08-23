@@ -3,12 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-      #calculator {
-        width: 750px;
-        height: 550px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <script defer src="myScripts.js"></script>
     <script>
       if (typeof module === 'object') {
@@ -27,7 +22,17 @@
     <h1>Hello World!</h1>
 
     <div id="calculator"></div>
-
-    <button id="generateNewSeed">New Graph</button>
+    <div>
+      <h3>Choose the degree of the random graph you want to model:</h3>
+    </div>
+    <div id="button-selectors">
+      <button id="degree-1">Degree 1</button>
+      <button id="degree-2">Degree 2</button>
+      <button id="degree-3">Degree 3</button>
+      <button id="degree-4">Degree 4</button>
+      <button id="degree-5">Degree 5</button>
+      <button id="degree-6">Degree 6</button>
+      <button id="degree-surprise">Surprise me!</button>
+    </div>
   </body>
 </html>

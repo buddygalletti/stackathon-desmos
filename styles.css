@@ -1,0 +1,11 @@
+#calculator {
+  display: flex;
+  align-content: center;
+  width: 750px;
+  height: 550px;
+}
+#button-selectors {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
