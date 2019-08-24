@@ -8,8 +8,8 @@ let win;
 app.on('ready', () => {
   // Create the browser window.
   win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 750,
+    height: 1000,
     webPreferences: {
       nodeIntegration: true
     }

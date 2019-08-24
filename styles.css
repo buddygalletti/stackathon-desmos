@@ -7,10 +7,35 @@
 #button-selectors {
   display: flex;
   justify-content: space-evenly;
-  align-content: space-between;
   flex-wrap: wrap;
 }
 
 button {
   margin: 1em;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  background-color: dodgerblue;
+  color: white;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  background-color: dodgerblue;
+  color: white;
+}
+
+h1 {
+  font-family: 'Corben', Georgia, Times, serif;
+  font-size: 5em;
+}
+
+p {
+  font-family: 'Corben', Georgia, Times, serif;
+  font-size: 20px;
+  line-height: 25px;
+  padding-top: 15px;
 }
