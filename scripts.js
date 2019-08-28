@@ -2,8 +2,17 @@ const elt = document.getElementById('calculator');
 
 // remove the secret folders option when not testing
 const calculator = Desmos.GraphingCalculator(elt, {
-  administerSecretFolders: true
+  administerSecretFolders: false
 });
+
+const colors = [
+  Desmos.Colors.RED,
+  Desmos.Colors.BLUE,
+  Desmos.Colors.GREEN,
+  Desmos.Colors.PURPLE,
+  Desmos.Colors.ORANGE,
+  Desmos.Colors.BLACK
+];
 
 class Seed {
   constructor(degree) {
@@ -11,6 +20,7 @@ class Seed {
     this.degree = degree || Math.floor(Math.random() * 6) + 1;
     this.coefficients = [];
     this.expression = '';
+    this.color = null;
   }
   setCoeffs() {
     let degree = this.degree;
@@ -39,6 +49,9 @@ class Seed {
       }
     }, '');
   }
+  setColor() {
+    this.color = colors[Math.floor(Math.random() * 6)];
+  }
 }
 let seed;
 
@@ -48,9 +61,11 @@ newDegOne.addEventListener('click', () => {
   seed = new Seed(1);
   seed.setCoeffs();
   seed.setExpression();
+  seed.setColor();
   calculator.setExpression({
     id: `${seed.id}`,
     latex: `${seed.expression}`,
+    color: seed.color,
     secret: true
   });
 });
@@ -61,9 +76,11 @@ newDegTwo.addEventListener('click', () => {
   seed = new Seed(2);
   seed.setCoeffs();
   seed.setExpression();
+  seed.setColor();
   calculator.setExpression({
     id: `${seed.id}`,
     latex: `${seed.expression}`,
+    color: seed.color,
     secret: true
   });
 });
@@ -74,9 +91,11 @@ newDegThree.addEventListener('click', () => {
   seed = new Seed(3);
   seed.setCoeffs();
   seed.setExpression();
+  seed.setColor();
   calculator.setExpression({
     id: `${seed.id}`,
     latex: `${seed.expression}`,
+    color: seed.color,
     secret: true
   });
 });
@@ -87,9 +106,11 @@ newDegFour.addEventListener('click', () => {
   seed = new Seed(4);
   seed.setCoeffs();
   seed.setExpression();
+  seed.setColor();
   calculator.setExpression({
     id: `${seed.id}`,
     latex: `${seed.expression}`,
+    color: seed.color,
     secret: true
   });
 });
@@ -100,9 +121,11 @@ newDegFive.addEventListener('click', () => {
   seed = new Seed(5);
   seed.setCoeffs();
   seed.setExpression();
+  seed.setColor();
   calculator.setExpression({
     id: `${seed.id}`,
     latex: `${seed.expression}`,
+    color: seed.color,
     secret: true
   });
 });
@@ -113,9 +136,11 @@ newDegSix.addEventListener('click', () => {
   seed = new Seed(6);
   seed.setCoeffs();
   seed.setExpression();
+  seed.setColor();
   calculator.setExpression({
     id: `${seed.id}`,
     latex: `${seed.expression}`,
+    color: seed.color,
     secret: true
   });
 });
@@ -126,9 +151,11 @@ newRandomDeg.addEventListener('click', () => {
   seed = new Seed();
   seed.setCoeffs();
   seed.setExpression();
+  seed.setColor();
   calculator.setExpression({
     id: `${seed.id}`,
     latex: `${seed.expression}`,
+    color: seed.color,
     secret: true
   });
 });

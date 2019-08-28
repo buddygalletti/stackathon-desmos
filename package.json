@@ -16,7 +16,8 @@
     "url": "https://github.com/buddygalletti/stackathon-desmos/issues"
   },
   "homepage": "https://github.com/buddygalletti/stackathon-desmos#readme",
-  "devDependencies": {
-    "electron": "^6.0.3"
+  "dependencies": {
+    "electron": "^6.0.3",
+    "electron-packager": "^14.0.4"
   }
 }
