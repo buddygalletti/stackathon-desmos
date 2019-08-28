@@ -77,7 +77,8 @@ const mainMenuTemplate = [
       { role: 'zoomin' },
       { role: 'zoomout' },
       { type: 'separator' },
-      { role: 'togglefullscreen' }
+      { role: 'togglefullscreen' },
+      { role: 'hide' }
     ]
   }
 ];
