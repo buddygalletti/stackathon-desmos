@@ -20,6 +20,16 @@
     />
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
+      });
+    </script>
+    <script
+      type="text/javascript"
+      async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"
+    ></script>
     <script defer src="scripts.js"></script>
     <script>
       if (typeof module === 'object') {
@@ -37,11 +47,12 @@
   <body>
     <div id="header">
       <h1>re:fctrd</h1>
+      <h5>powered by a hatred of college math curriculum</h5>
     </div>
 
     <div id="calculator"></div>
     <div id="footer">
-      <p>Choose the degree of the random graph you want to model:</p>
+      <p>Choose the degree of the random polynomial you want to model:</p>
     </div>
     <div id="button-selectors">
       <button type="button" class="btn btn-primary" id="degree-1">
@@ -65,6 +76,21 @@
       <button type="button" class="btn btn-primary" id="degree-surprise">
         Surprise me!
       </button>
+      <button type="button" class="btn btn-danger" id="solution">
+        Show Me the Solution
+      </button>
     </div>
+    <div id="solution-box"></div>
+
+    <script>
+      const showSolutionButton = document.getElementById('solution');
+      showSolutionButton.addEventListener('click', () => {
+        if (seed) {
+          const showSolutionBox = document.getElementById('solution-box');
+          showSolutionBox.innerHTML = `<p>The polynomial you were attempting to model was: $$${seed.expression}$$</p>`;
+          MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+        }
+      });
+    </script>
   </body>
 </html>
