@@ -73,6 +73,7 @@ newDegOne.addEventListener('click', () => {
 const newDegTwo = document.getElementById('degree-2');
 newDegTwo.addEventListener('click', () => {
   document.getElementById('solution-box').innerHTML = '';
+  document.getElementById('solution').disabled = false;
   calculator.setBlank();
   seed = new Seed(2);
   seed.setCoeffs();
@@ -89,6 +90,7 @@ newDegTwo.addEventListener('click', () => {
 const newDegThree = document.getElementById('degree-3');
 newDegThree.addEventListener('click', () => {
   document.getElementById('solution-box').innerHTML = '';
+  document.getElementById('solution').disabled = false;
   calculator.setBlank();
   seed = new Seed(3);
   seed.setCoeffs();
@@ -105,6 +107,7 @@ newDegThree.addEventListener('click', () => {
 const newDegFour = document.getElementById('degree-4');
 newDegFour.addEventListener('click', () => {
   document.getElementById('solution-box').innerHTML = '';
+  document.getElementById('solution').disabled = false;
   calculator.setBlank();
   seed = new Seed(4);
   seed.setCoeffs();
@@ -121,6 +124,7 @@ newDegFour.addEventListener('click', () => {
 const newDegFive = document.getElementById('degree-5');
 newDegFive.addEventListener('click', () => {
   document.getElementById('solution-box').innerHTML = '';
+  document.getElementById('solution').disabled = false;
   calculator.setBlank();
   seed = new Seed(5);
   seed.setCoeffs();
@@ -137,6 +141,7 @@ newDegFive.addEventListener('click', () => {
 const newDegSix = document.getElementById('degree-6');
 newDegSix.addEventListener('click', () => {
   document.getElementById('solution-box').innerHTML = '';
+  document.getElementById('solution').disabled = false;
   calculator.setBlank();
   seed = new Seed(6);
   seed.setCoeffs();
@@ -153,6 +158,7 @@ newDegSix.addEventListener('click', () => {
 const newRandomDeg = document.getElementById('degree-surprise');
 newRandomDeg.addEventListener('click', () => {
   document.getElementById('solution-box').innerHTML = '';
+  document.getElementById('solution').disabled = false;
   calculator.setBlank();
   seed = new Seed();
   seed.setCoeffs();

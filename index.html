@@ -76,7 +76,12 @@
       <button type="button" class="btn btn-primary" id="degree-surprise">
         Surprise me!
       </button>
-      <button type="button" class="btn btn-danger" id="solution">
+      <button
+        type="button"
+        disabled="true"
+        class="btn btn-danger"
+        id="solution"
+      >
         Show Me the Solution
       </button>
     </div>
@@ -89,6 +94,7 @@
           const showSolutionBox = document.getElementById('solution-box');
           showSolutionBox.innerHTML = `<p>The polynomial you were attempting to model was: $$${seed.expression}$$</p>`;
           MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+          showSolutionButton.disabled = true;
         }
       });
     </script>
