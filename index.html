@@ -91,8 +91,10 @@
       const showSolutionButton = document.getElementById('solution');
       showSolutionButton.addEventListener('click', () => {
         if (seed) {
+          const simplified = seed.expression.split('x^0');
+          const displaySimplified = simplified[0].replace('x^1', 'x');
           const showSolutionBox = document.getElementById('solution-box');
-          showSolutionBox.innerHTML = `<p>The polynomial you were attempting to model was: $$${seed.expression}$$</p>`;
+          showSolutionBox.innerHTML = `<p>The polynomial you were attempting to model was: $$y=${displaySimplified}$$</p>`;
           MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
           showSolutionButton.disabled = true;
         }
