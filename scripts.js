@@ -57,6 +57,8 @@ let seed;
 
 const newDegOne = document.getElementById('degree-1');
 newDegOne.addEventListener('click', () => {
+  document.getElementById('solution-box').innerHTML = '';
+  document.getElementById('solution').disabled = false;
   calculator.setBlank();
   seed = new Seed(1);
   seed.setCoeffs();
